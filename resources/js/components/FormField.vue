@@ -38,6 +38,22 @@
         }
     }
 
+    function setQuoteToolSettings(self, tools) {
+        if (self.field.toolSettings.quote.activated === true) {
+            const QuoteTool = require('@editorjs/quote');
+
+            tools.quote = {
+                class: QuoteTool,
+                inlineToolbar: true,
+                shortcut: self.field.toolSettings.quote.shortcut,
+                config: {
+                    quotePlaceholder: self.field.toolSettings.code.quotePlaceholder,
+                    captionPlaceholder: self.field.toolSettings.code.captionPlaceholder
+                },
+            }
+        }
+    }
+
     function setCodeToolSettings(self, tools) {
         if (self.field.toolSettings.code.activated === true) {
             const CodeTool = require('@editorjs/code');
@@ -190,6 +206,7 @@
 
                 setHeadingToolSettings(self, tools);
                 setListToolSettings(self, tools);
+                setQuoteToolSettings(self, tools);
                 setCodeToolSettings(self, tools);
                 setLinkToolSettings(self, tools);
                 setImageToolSettings(self, tools);

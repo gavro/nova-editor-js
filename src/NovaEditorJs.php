@@ -107,6 +107,9 @@ class NovaEditorJs extends Field
                         $block['data']['classes'] = NovaEditorJs::calculateImageClasses($block['data']);
                         $htmlOutput .= view('nova-editor-js::image', $block['data'])->render();
                         break;
+                    case 'quote':
+                        $htmlOutput .= view('nova-editor-js::quote', $block['data'])->render();
+                        break;
                     case 'code':
                         $htmlOutput .= view('nova-editor-js::code', $block['data'])->render();
                         break;

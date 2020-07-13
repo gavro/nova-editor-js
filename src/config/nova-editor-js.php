@@ -24,6 +24,15 @@ return [
             'inlineToolbar' => true,
             'shortcut' => 'CMD+SHIFT+L'
         ],
+        'quote' => [
+            'activated' => true,
+            'inlineToolbar' => true,
+            'shortcut' => 'CMD+SHIFT+O',
+            'config' => [
+                'quotePlaceholder' => 'Enter a quote',
+                'captionPlaceholder' => 'Quote\'s author',
+            ]
+        ],
         'code' => [
             'activated' => true,
             'placeholder' => '',
@@ -185,6 +194,17 @@ return [
                 ],
                 'stretched' => [
                     'type' => 'boolean'
+                ]
+            ],
+            'quote' => [
+                'text' => [
+                    'type' => 'string'
+                ],
+                'caption' => [
+                    'type' => 'string'
+                ],
+                'alignment' => [
+                    'type' => 'string'
                 ]
             ],
             'code' => [
