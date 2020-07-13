@@ -33,6 +33,16 @@ return [
                 'captionPlaceholder' => 'Quote\'s author',
             ]
         ],
+        'warning' => [
+            'activated' => true,
+            'inlineToolbar' => true,
+            'shortcut' => 'CMD+SHIFT+W',
+            'config' => [
+                'warningType' => 'default',
+                'titlePlaceholder' => 'Title',
+                'messagePlaceholder' => 'Message',
+            ]
+        ],
         'code' => [
             'activated' => true,
             'placeholder' => '',

@@ -47,8 +47,25 @@
                 inlineToolbar: true,
                 shortcut: self.field.toolSettings.quote.shortcut,
                 config: {
-                    quotePlaceholder: self.field.toolSettings.code.quotePlaceholder,
-                    captionPlaceholder: self.field.toolSettings.code.captionPlaceholder
+                    quotePlaceholder: self.field.toolSettings.quote.quotePlaceholder,
+                    captionPlaceholder: self.field.toolSettings.quote.captionPlaceholder
+                },
+            }
+        }
+    }
+
+    function setWarningToolSettings(self, tools) {
+        if (self.field.toolSettings.quote.activated === true) {
+            const WarningTool = require('@editorjs/warning');
+
+            tools.warning = {
+                class: WarningTool,
+                inlineToolbar: true,
+                shortcut: self.field.toolSettings.warning.shortcut,
+                config: {
+                    warningType: self.field.toolSettings.warning.warningType,
+                    titlePlaceholder: self.field.toolSettings.warning.titlePlaceholder,
+                    messagePlaceholder: self.field.toolSettings.warning.messagePlaceholder
                 },
             }
         }
@@ -207,6 +224,7 @@
                 setHeadingToolSettings(self, tools);
                 setListToolSettings(self, tools);
                 setQuoteToolSettings(self, tools);
+                setWarningToolSettings(self, tools);
                 setCodeToolSettings(self, tools);
                 setLinkToolSettings(self, tools);
                 setImageToolSettings(self, tools);

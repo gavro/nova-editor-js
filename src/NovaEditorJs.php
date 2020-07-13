@@ -110,6 +110,9 @@ class NovaEditorJs extends Field
                     case 'quote':
                         $htmlOutput .= view('nova-editor-js::quote', $block['data'])->render();
                         break;
+                    case 'warning':
+                        $htmlOutput .= view('nova-editor-js::warning', $block['data'])->render();
+                        break;
                     case 'code':
                         $htmlOutput .= view('nova-editor-js::code', $block['data'])->render();
                         break;
