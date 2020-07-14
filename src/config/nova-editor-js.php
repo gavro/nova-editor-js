@@ -237,6 +237,7 @@ return [
                         ],
                         'image' => [
                             'type' => 'array',
+                            'required' => false,
                             'data' => [
                                 'url' => [
                                     'type' => 'string',
@@ -311,7 +312,29 @@ return [
                     'type' => 'string',
                     'required' => false,
                 ],
-            ]
+            ],
+            'quote' => [
+                'text' => [
+                    'type' => 'string',
+                ],
+                'caption' => [
+                    'type' => 'string',
+                ],
+                'alignment' => [
+                    'type' => 'string',
+                ],
+            ],
+            'warning' => [
+                'type' => [
+                    'type' => 'string',
+                ],
+                'title' => [
+                    'type' => 'string',
+                ],
+                'message' => [
+                    'type' => 'string',
+                ],
+            ],
         ]
     ]
 ];
