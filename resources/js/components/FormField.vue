@@ -128,6 +128,17 @@
         }
     }
 
+    function setUnderlineSettings(self, tools) {
+        if (self.field.toolSettings.underline.activated === true) {
+            const Underline = require('@editorjs/underline');
+
+            tools.underline = {
+                class: Underline,
+                shortcut: self.field.toolSettings.underline.shortcut,
+            }
+        }
+    }
+
     function setChecklistToolSettings(self, tools) {
         if (self.field.toolSettings.checklist.activated === true) {
             const Checklist = require('@editorjs/checklist');
@@ -204,6 +215,18 @@
         }
     }
 
+    function setInlineStyledElementsSettings(self, tools) {
+        if (self.field.toolSettings.inlineStyledElements.activated === true) {
+            const styledElements = require('editorjs-inline-styled-elements');
+
+            tools.infoIcon = { class: styledElements.InfoIcon }
+            tools.questionIcon = { class: styledElements.QuestionIcon }
+            tools.dIcon = { class: styledElements.DIcon }
+            tools.externalLinkIcon = { class: styledElements.ExternalLinkIcon }
+            tools.inlineButton = { class: styledElements.InlineButton }
+        }
+    }
+
     export default {
         mixins: [FormField, HandlesValidationErrors],
 
@@ -229,12 +252,14 @@
                 setLinkToolSettings(self, tools);
                 setImageToolSettings(self, tools);
                 setInlineCodeToolSettings(self, tools);
+                setUnderlineSettings(self, tools);
                 setChecklistToolSettings(self, tools);
                 setMarkerToolSettings(self, tools);
                 setDelimiterToolSettings(self, tools);
                 setTableToolSettings(self, tools);
                 setRawToolSettings(self, tools);
                 setEmbedToolSettings(self, tools);
+                setInlineStyledElementsSettings(self, tools);
 
                 var editor = new EditorJS({
                     /**

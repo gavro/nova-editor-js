@@ -103,6 +103,10 @@ return [
             'activated' => true,
             'shortcut' => 'CMD+SHIFT+A',
         ],
+        'underline' => [
+            'activated' => true,
+            'shortcut' => 'CMD+SHIFT+U',
+        ],
         'checklist' => [
             'activated' => true,
             'inlineToolbar' => true,
@@ -133,6 +137,9 @@ return [
                 'youtube' => true
             ],
         ],
+        'inlineStyledElements' => [
+            'activated' => true,
+        ],
     ],
 
     /**
@@ -147,7 +154,7 @@ return [
                 ],
                 'level' => [
                     'type' => 'int',
-                    'canBeOnly' => [1, 2, 3, 4, 5]
+                    'canBeOnly' => [1, 2, 3, 4, 5, 6]
                 ]
             ],
             'paragraph' => [
