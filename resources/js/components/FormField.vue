@@ -71,6 +71,23 @@
         }
     }
 
+    function setButtonLinkToolSettings(self, tools) {
+        if (self.field.toolSettings.buttonLink.activated === true) {
+            const ButtonLink = require('editorjs-button-link');
+
+            tools.buttonLink = {
+                class: ButtonLink,
+                inlineToolbar: false,
+                shortcut: self.field.toolSettings.buttonLink.shortcut,
+                config: {
+                    buttonLinkType: self.field.toolSettings.buttonLink.buttonLinkType,
+                    titlePlaceholder: self.field.toolSettings.buttonLink.titlePlaceholder,
+                    linkPlaceholder: self.field.toolSettings.buttonLink.linkPlaceholder
+                },
+            }
+        }
+    }
+
     function setCodeToolSettings(self, tools) {
         if (self.field.toolSettings.code.activated === true) {
             const CodeTool = require('@editorjs/code');
@@ -250,6 +267,7 @@
                 setWarningToolSettings(self, tools);
                 setCodeToolSettings(self, tools);
                 setLinkToolSettings(self, tools);
+                setButtonLinkToolSettings(self, tools);
                 setImageToolSettings(self, tools);
                 setInlineCodeToolSettings(self, tools);
                 setUnderlineSettings(self, tools);

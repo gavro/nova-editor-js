@@ -28,6 +28,7 @@
         "@editorjs/underline": "^1.0.0",
         "@editorjs/warning": "https://github.com/gavro/warning#warning-types",
         "cross-env": "^7.0.2",
+        "editorjs-button-link": "https://github.com/gavro/editorjs-button-link",
         "editorjs-inline-styled-elements": "https://github.com/gavro/editorjs-inline-styled-elements",
         "laravel-mix": "^5.0.4",
         "laravel-nova": "^1.0.9",

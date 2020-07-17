@@ -52,6 +52,14 @@ return [
             'activated' => true,
             'shortcut' => 'CMD+SHIFT+L'
         ],
+        'buttonLink' => [
+            'activated' => true,
+            'shortcut' => 'CMD+SHIFT+B',
+            'config' => [
+                'buttonLinkType' => 'default',
+                'linkPlaceholder' => 'Link',
+            ]
+        ],
         'image' => [
             'activated' => true,
             'shortcut' => 'CMD+SHIFT+I',
@@ -339,6 +347,20 @@ return [
                     'type' => 'string',
                 ],
                 'message' => [
+                    'type' => 'string',
+                ],
+            ],
+            'buttonLink' => [
+                'type' => [
+                    'type' => 'string',
+                ],
+                'alignment' => [
+                    'type' => 'string',
+                ],
+                'title' => [
+                    'type' => 'string',
+                ],
+                'link' => [
                     'type' => 'string',
                 ],
             ],
