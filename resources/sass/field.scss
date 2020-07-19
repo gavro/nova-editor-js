@@ -160,4 +160,36 @@
       vertical-align: top;
     }
   }
+
+  .editor-js-warning > div {
+    border-left-width: 3px;
+
+    &.default {
+      border-left-color: #777;
+    }
+    &.info {
+      border-left-color: #1D67BD;
+    }
+    &.success {
+      border-left-color: #5cb85c;
+    }
+    &.warning {
+      border-left-color: #f0ad4e;
+    }
+    &.danger {
+      border-left-color: #d9534f;
+    }
+  }
+
+  .editor-js-image {
+    text-align: center;
+
+    &.floatToLeft {
+      text-align: left;
+    }
+
+    &.floatToRight {
+      text-align: right;
+    }
+  }
 }

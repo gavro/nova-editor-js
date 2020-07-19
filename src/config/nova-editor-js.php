@@ -217,9 +217,26 @@ return [
                 'withBackground' => [
                     'type' => 'boolean'
                 ],
-                'stretched' => [
-                    'type' => 'boolean'
-                ]
+                 'stretched' => [
+                     'required' => false,
+                     'type' => 'boolean'
+                 ],
+                 'floatToLeft' => [
+                     'required' => false,
+                     'type' => 'boolean'
+                 ],
+                 'floatToRight' => [
+                     'required' => false,
+                     'type' => 'boolean'
+                 ],
+                 'height' => [
+                     'required' => false,
+                     'type' => 'integer'
+                 ],
+                 'width' => [
+                     'required' => false,
+                     'type' => 'integer'
+                 ]
             ],
             'quote' => [
                 'text' => [
